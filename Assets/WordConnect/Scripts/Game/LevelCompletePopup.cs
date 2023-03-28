@@ -51,9 +51,9 @@ namespace WordConnect
 			bool		isLastLevel					= (bool)inData[10];
 
 			backgroundImage.sprite		= level.packInfo.background;
-			packNameText.text			= level.packInfo.packName;
+			packNameText.gameObject.GetComponent<ArabicText>().Text			= level.packInfo.packName;
 			//levelText.text				= string.Format("LEVEL {0} COMPLETED", level.levelData.GameLevelNumber);
-			levelText.gameObject.GetComponent<ArabicText>().Text = " مستوى مكتمل" + level.levelData.GameLevelNumber;
+			levelText.gameObject.GetComponent<ArabicText>().Text = " مستوى مكتمل " + level.levelData.GameLevelNumber;
 			gamePointsText.text			= currentGamePoints.ToString();
 			//nextLevelButtonText.text	= isLastLevel ? "بيت" : string.Format("PLAY LEVEL {0}", level.levelData.GameLevelNumber + 1);
 			nextLevelButtonText.gameObject.GetComponent<ArabicText>().Text = isLastLevel ? "بيت" : " مستوى اللعب " + (level.levelData.GameLevelNumber + 1);
@@ -80,7 +80,7 @@ namespace WordConnect
 				categoryText.text				= string.Format("{0} {1} / {2}", level.categoryInfo.displayName, categoryNumberComplete, totalLevelsInCategory);
 
 				//extraWordsText.text				= string.Format("+ {0} Extra Words", extraWordsCoinsAwarded);
-				extraWordsText.gameObject.GetComponent<ArabicText>().Text = "+ كلمات إضافية" + (extraWordsCoinsAwarded);
+				extraWordsText.gameObject.GetComponent<ArabicText>().Text = "+ كلمات إضافية " + (extraWordsCoinsAwarded);
 
 				float categoryProgressFromValue	= Mathf.Lerp(0.095f, 1f, (float)(categoryNumberComplete - 1) / (float)totalLevelsInCategory);
 				float categoryProgressToValue	= Mathf.Lerp(0.095f, 1f, (float)(categoryNumberComplete) / (float)totalLevelsInCategory);

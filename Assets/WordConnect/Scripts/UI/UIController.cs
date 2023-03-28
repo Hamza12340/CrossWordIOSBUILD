@@ -110,7 +110,7 @@ namespace WordConnect
 
 			// Set the new level text on the top bar
 			//topBarLevelText.text = "LEVEL " + GameController.Instance.CurrentActiveLevel.levelData.GameLevelNumber;
-			topBarLevelText.gameObject.GetComponent<ArabicText>().Text = "مستوى  " + GameController.Instance.CurrentActiveLevel.levelData.GameLevelNumber;
+			topBarLevelText.gameObject.GetComponent<ArabicText>().Text = " مستوى " + GameController.Instance.CurrentActiveLevel.levelData.GameLevelNumber;
 			// Make sure the correct background is being displayed
 			SetBackground(selectedPackInfo.background);
 
