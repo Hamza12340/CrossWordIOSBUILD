@@ -92,9 +92,10 @@ namespace WordConnect
 		public void UpdateUI()
 		{
 			if (!GameController.Instance.IsLastLevelInGameCompleted())
-			{
+			{   
 				// Set the main screens play button text
-				playButtonText.text = string.Format("PLAY LEVEL {0}", GameController.Instance.LastCompletedLevelNumber + 1);
+				//playButtonText.gameObject.GetComponent<ArabicText>().Text = string.Format("{لعب المستوى {0", GameController.Instance.LastCompletedLevelNumber + 1);
+				playButtonText.gameObject.GetComponent<ArabicText>().Text = " لعب المستوى "+ (GameController.Instance.LastCompletedLevelNumber + 1);   // Here Convert to arabic Text
 			}
 
 			UpdatePackListItems();
@@ -108,8 +109,8 @@ namespace WordConnect
 			selectedCategoryInfo	= GameController.Instance.CurrentActiveLevel.categoryInfo;
 
 			// Set the new level text on the top bar
-			topBarLevelText.text = "LEVEL " + GameController.Instance.CurrentActiveLevel.levelData.GameLevelNumber;
-
+			//topBarLevelText.text = "LEVEL " + GameController.Instance.CurrentActiveLevel.levelData.GameLevelNumber;
+			topBarLevelText.gameObject.GetComponent<ArabicText>().Text = "مستوى  " + GameController.Instance.CurrentActiveLevel.levelData.GameLevelNumber;
 			// Make sure the correct background is being displayed
 			SetBackground(selectedPackInfo.background);
 
