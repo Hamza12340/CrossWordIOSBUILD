@@ -37,7 +37,7 @@ namespace WordConnect
 		public override void OnShowing(object[] inData)
 		{
 			base.OnShowing(inData);
-
+																																																																																					
 			ActiveLevel	level						= (ActiveLevel)inData[0];
 			bool		isLevelAlreadyComplete		= (bool)inData[1];
 			int			currentGamePoints			= (int)inData[2];
