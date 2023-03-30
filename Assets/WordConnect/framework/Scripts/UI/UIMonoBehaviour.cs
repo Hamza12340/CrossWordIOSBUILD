@@ -13,18 +13,21 @@ namespace BBG
 		#endregion
 
 		#region Member Variables
-
+		public static UIMonoBehaviour Instance;
 		private IEnumerator shakeRoutine;
 		private IEnumerator pulseRoutine;
 		private IEnumerator twistRoutine;
 
 		private CanvasGroup canvasGroup;
 
-		#endregion
+        #endregion
+        private void Start()
+        {
+			Instance = this;
+        }
+        #region Properties
 
-		#region Properties
-
-		public CanvasGroup CG
+        public CanvasGroup CG
 		{
 			get
 			{
