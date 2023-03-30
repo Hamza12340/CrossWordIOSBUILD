@@ -95,7 +95,7 @@ namespace WordConnect
 			{   
 				// Set the main screens play button text
 				//playButtonText.gameObject.GetComponent<ArabicText>().Text = string.Format("{لعب المستوى {0", GameController.Instance.LastCompletedLevelNumber + 1);
-				playButtonText.gameObject.GetComponent<ArabicText>().Text = (GameController.Instance.LastCompletedLevelNumber + 1).ToString();   // Here Convert to arabic Text
+				playButtonText.text = (GameController.Instance.LastCompletedLevelNumber + 1).ToString();   // Here Convert to arabic Text
 			}
 
 			UpdatePackListItems();
@@ -110,7 +110,7 @@ namespace WordConnect
 
 			// Set the new level text on the top bar
 			//topBarLevelText.text = "LEVEL " + GameController.Instance.CurrentActiveLevel.levelData.GameLevelNumber;
-			topBarLevelText.gameObject.GetComponent<ArabicText>().Text = " مستوى " + GameController.Instance.CurrentActiveLevel.levelData.GameLevelNumber;
+			topBarLevelText.text =  GameController.Instance.CurrentActiveLevel.levelData.GameLevelNumber.ToString("");
 			// Make sure the correct background is being displayed
 			SetBackground(selectedPackInfo.background);
 

@@ -53,10 +53,10 @@ namespace WordConnect
 			backgroundImage.sprite		= level.packInfo.background;
 			packNameText.gameObject.GetComponent<ArabicText>().Text			= level.packInfo.packName;
 			//levelText.text				= string.Format("LEVEL {0} COMPLETED", level.levelData.GameLevelNumber);
-			levelText.gameObject.GetComponent<ArabicText>().Text = " اكتمل المستوى " + level.levelData.GameLevelNumber;
+			levelText.text =   level.levelData.GameLevelNumber.ToString();
 			gamePointsText.text			= currentGamePoints.ToString();
 			//nextLevelButtonText.text	= isLastLevel ? "بيت" : string.Format("PLAY LEVEL {0}", level.levelData.GameLevelNumber + 1);
-			nextLevelButtonText.gameObject.GetComponent<ArabicText>().Text = isLastLevel ? "بيت" : " مستوى اللعب " + (level.levelData.GameLevelNumber + 1);
+			nextLevelButtonText.text = (level.levelData.GameLevelNumber + 1).ToString();
 
 			categoryCoinPrizeIcon.gameObject.SetActive(true);
 			extraWordsCoinMarker.gameObject.SetActive(true);
