@@ -95,7 +95,7 @@ namespace WordConnect
 			{   
 				// Set the main screens play button text
 				//playButtonText.gameObject.GetComponent<ArabicText>().Text = string.Format("{لعب المستوى {0", GameController.Instance.LastCompletedLevelNumber + 1);
-				playButtonText.gameObject.GetComponent<ArabicText>().Text = " لعب المستوى "+ (GameController.Instance.LastCompletedLevelNumber + 1);   // Here Convert to arabic Text
+				playButtonText.gameObject.GetComponent<ArabicText>().Text = (GameController.Instance.LastCompletedLevelNumber + 1).ToString();   // Here Convert to arabic Text
 			}
 
 			UpdatePackListItems();
